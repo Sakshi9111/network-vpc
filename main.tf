@@ -3,14 +3,11 @@ terraform {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 4.0"
+      region = "ap-south-1"
     }
   }
 }
 
-# Configure the AWS Provider
-provider "aws" {
-  region = "ap-south-1"
-}
 
 
 resource "aws_instance" "example" {
